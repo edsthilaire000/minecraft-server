@@ -22,3 +22,9 @@ fi
 
 # === Ejemplo: Mensaje de bienvenida ===
 echo "✅ Entorno de servidor preparado correctamente."
+
+
+# == Limpiar logs antiguos ==
+find logs/ -type f -name "*.log.gz" -mtime +7 -exec rm {} \;
+echo "🧹 Logs viejos eliminados (mayores a 7 días)."
+
